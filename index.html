@@ -1,82 +1,124 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, Settings } from 'lucide-react';
-import ArtechLogo from './assets/ARTECH_Logo1.png';
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTECH Automação - Soluções Industriais Inteligentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-bottom: #ccc 1px solid;
+        }
+        header h1 {
+            color: #555;
+            margin: 0;
+        }
+        section {
+            padding: 20px 0;
+            border-bottom: #ccc 1px solid;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .services, .courses {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .service, .course {
+            flex: 1;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+        footer {
+            background: #f4f4f4;
+            color: #555;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-export default function App() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      {/* Header */}
-      <header className="flex justify-between items-center p-6 bg-gray-800 shadow-lg">
-        <img src={ArtechLogo} alt="ARTECH Logo" className="h-16" />
-        <nav className="space-x-6">
-          <a href="#home" className="hover:text-blue-400">Home</a>
-          <a href="#sobre" className="hover:text-blue-400">Sobre</a>
-          <a href="#servicos" className="hover:text-blue-400">Serviços</a>
-          <a href="#contato" className="hover:text-blue-400">Contato</a>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section id="home" className="flex flex-col items-center justify-center text-center py-20 px-4">
-        <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-6xl font-bold">
-          Tecnologia Inteligente, Soluções Eficientes
-        </motion.h1>
-        <p className="mt-4 text-lg text-gray-300 max-w-2xl">
-          A ARTECH é especialista em automação industrial, oferecendo projetos sob medida para otimizar processos e aumentar a produtividade.
-        </p>
-        <Button className="mt-8 bg-blue-600 hover:bg-blue-700">Saiba Mais</Button>
-      </section>
-
-      {/* Serviços */}
-      <section id="servicos" className="py-20 px-4 bg-gray-800">
-        <h2 className="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="bg-gray-900">
-            <CardContent className="p-6 text-center">
-              <Settings className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-xl font-semibold mb-2">Automação de Processos</h3>
-              <p className="text-gray-400">Projetos personalizados para aumentar eficiência e reduzir custos.</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-gray-900">
-            <CardContent className="p-6 text-center">
-              <Settings className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-xl font-semibold mb-2">Programação de CLP e IHM</h3>
-              <p className="text-gray-400">Soluções completas utilizando as principais plataformas do mercado.</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-gray-900">
-            <CardContent className="p-6 text-center">
-              <Settings className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-xl font-semibold mb-2">Integração de Sistemas</h3>
-              <p className="text-gray-400">Conectividade entre máquinas, sistemas e supervisórios para melhor controle.</p>
-            </CardContent>
-          </Card>
+    <header>
+        <div class="container">
+            <h1>ARTECH Automação</h1>
+            <p>Soluções Técnicas Inteligentes para a Indústria</p>
         </div>
-      </section>
+    </header>
 
-      {/* Contato */}
-      <section id="contato" className="py-20 px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Fale Conosco</h2>
-        <div className="flex flex-col md:flex-row justify-center gap-12">
-          <div className="flex items-center gap-4">
-            <Mail className="w-6 h-6 text-blue-400" />
-            <span>contato@artech.com.br</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <Phone className="w-6 h-6 text-blue-400" />
-            <span>(11) 99999-9999</span>
-          </div>
-        </div>
-      </section>
+    <div class="container">
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-center py-6 text-gray-500">
-        © {new Date().getFullYear()} ARTECH - Todos os direitos reservados.
-      </footer>
+        <section id="about">
+            <h2>Sobre a ARTECH</h2>
+            <p>A ARTECH Automação nasceu da paixão e da experiência de Artur da Silva Alves, um engenheiro eletricista com mais de 18 anos de atuação no coração da automação industrial. Com uma sólida formação e uma carreira consolidada em empresas de renome, percebi a necessidade de um parceiro técnico que pudesse oferecer a mesma excelência em projetos menores e mais específicos. A ARTECH é a materialização desse propósito: levar soluções inteligentes e eficientes a um nicho de mercado que exige agilidade, conhecimento aprofundado e atenção aos detalhes.</p>
+        </section>
+
+        <section id="services">
+            <h2>Nossos Serviços</h2>
+            <p>Na ARTECH, cada desafio é uma oportunidade para aplicar nossa experiência e paixão pela automação. Nossa oferta de serviços é projetada para atender a necessidades específicas, com agilidade e precisão.</p>
+            <div class="services">
+                <div class="service">
+                    <h3>Desenvolvimento de Software</h3>
+                    <p>Programação e otimização de software para CLPs e IHMs de diversas plataformas (Siemens, Rockwell, Schneider, etc.).</p>
+                </div>
+                <div class="service">
+                    <h3>Consultoria Técnica</h3>
+                    <p>Diagnóstico de falhas, análise de segurança (NR12) e consultoria para otimização de processos.</p>
+                </div>
+                <div class="service">
+                    <h3>Implementação de Sistemas</h3>
+                    <p>Programação de robôs industriais, sistemas de visão, e parametrização de drivers e motores.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses">
+            <h2>Cursos Online</h2>
+            <p>Desenvolvido com base em mais de 18 anos de experiência real, nosso curso de "Técnicas de Programação em CLP e IHM Siemens TIA Portal" é sua porta de entrada para uma carreira sólida em automação industrial.</p>
+            <div class="course">
+                <h3>O que você vai aprender:</h3>
+                <ul>
+                    <li>Lógica de Programação e Tipos de Dados</li>
+                    <li>Programação em diversas linguagens (LAD, FBD, SCL, STL).</li>
+                    <li>Configuração e simulação com TIA Portal e PLCSIM.</li>
+                </ul>
+                <p><a href="#contact">Saiba mais sobre o curso!</a></p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <p>Estamos prontos para conversar sobre seu projeto ou para tirar dúvidas sobre nossos cursos.</p>
+            <p>Email: <a href="mailto:contato@artechautomacao.com.br">contato@artechautomacao.com.br</a></p>
+            <p>Telefone: [Seu telefone]</p>
+        </section>
+
     </div>
-  );
-}
+
+    <footer>
+        <p>&copy; 2025 ARTECH Automação. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
