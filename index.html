@@ -1,0 +1,82 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Mail, Phone, Settings } from 'lucide-react';
+import ArtechLogo from './assets/ARTECH_Logo1.png';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      {/* Header */}
+      <header className="flex justify-between items-center p-6 bg-gray-800 shadow-lg">
+        <img src={ArtechLogo} alt="ARTECH Logo" className="h-16" />
+        <nav className="space-x-6">
+          <a href="#home" className="hover:text-blue-400">Home</a>
+          <a href="#sobre" className="hover:text-blue-400">Sobre</a>
+          <a href="#servicos" className="hover:text-blue-400">Serviços</a>
+          <a href="#contato" className="hover:text-blue-400">Contato</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section id="home" className="flex flex-col items-center justify-center text-center py-20 px-4">
+        <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-6xl font-bold">
+          Tecnologia Inteligente, Soluções Eficientes
+        </motion.h1>
+        <p className="mt-4 text-lg text-gray-300 max-w-2xl">
+          A ARTECH é especialista em automação industrial, oferecendo projetos sob medida para otimizar processos e aumentar a produtividade.
+        </p>
+        <Button className="mt-8 bg-blue-600 hover:bg-blue-700">Saiba Mais</Button>
+      </section>
+
+      {/* Serviços */}
+      <section id="servicos" className="py-20 px-4 bg-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <Card className="bg-gray-900">
+            <CardContent className="p-6 text-center">
+              <Settings className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+              <h3 className="text-xl font-semibold mb-2">Automação de Processos</h3>
+              <p className="text-gray-400">Projetos personalizados para aumentar eficiência e reduzir custos.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-gray-900">
+            <CardContent className="p-6 text-center">
+              <Settings className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+              <h3 className="text-xl font-semibold mb-2">Programação de CLP e IHM</h3>
+              <p className="text-gray-400">Soluções completas utilizando as principais plataformas do mercado.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-gray-900">
+            <CardContent className="p-6 text-center">
+              <Settings className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+              <h3 className="text-xl font-semibold mb-2">Integração de Sistemas</h3>
+              <p className="text-gray-400">Conectividade entre máquinas, sistemas e supervisórios para melhor controle.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section id="contato" className="py-20 px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">Fale Conosco</h2>
+        <div className="flex flex-col md:flex-row justify-center gap-12">
+          <div className="flex items-center gap-4">
+            <Mail className="w-6 h-6 text-blue-400" />
+            <span>contato@artech.com.br</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <Phone className="w-6 h-6 text-blue-400" />
+            <span>(11) 99999-9999</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-center py-6 text-gray-500">
+        © {new Date().getFullYear()} ARTECH - Todos os direitos reservados.
+      </footer>
+    </div>
+  );
+}
